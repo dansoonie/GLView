@@ -1,1 +1,1 @@
-include ':app', ':glview'
+include ':examples', ':glview'
