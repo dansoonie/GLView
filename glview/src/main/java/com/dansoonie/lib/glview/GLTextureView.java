@@ -71,7 +71,7 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
     setSurfaceTextureListener(this);
   }
 
-  public void setGLWrapper(GLTextureView.GLWrapper glWrapper) {
+  public void setGLWrapper(GLView.GLWrapper glWrapper) {
     mGLWrapper = glWrapper;
   }
 
@@ -224,10 +224,6 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
     }
     mDetached = true;
     super.onDetachedFromWindow();
-  }
-
-  public interface GLWrapper {
-    GL wrap(GL gl);
   }
 
   public interface EGLContextFactory {
@@ -1331,7 +1327,7 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
   private GLTextureView.EGLConfigChooser mEGLConfigChooser;
   private GLTextureView.EGLContextFactory mEGLContextFactory;
   private GLTextureView.EGLWindowSurfaceFactory mEGLWindowSurfaceFactory;
-  private GLTextureView.GLWrapper mGLWrapper;
+  private GLView.GLWrapper mGLWrapper;
   private int mDebugFlags;
   private int mEGLContextClientVersion;
   private boolean mPreserveEGLContextOnPause;

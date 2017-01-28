@@ -1,6 +1,7 @@
 package com.dansoonie.lib.glview;
 
 import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
@@ -14,5 +15,9 @@ public interface GLView {
     void onSurfaceChanged(GL10 gl, int width, int height);
 
     void onDrawFrame(GL10 gl);
+  }
+
+  interface GLWrapper {
+    GL wrap(GL gl);
   }
 }

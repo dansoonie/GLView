@@ -79,7 +79,7 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
     // holder.setType(SurfaceHolder.SURFACE_TYPE_GPU);
   }
 
-  public void setGLWrapper(GLSurfaceView.GLWrapper glWrapper) {
+  public void setGLWrapper(GLView.GLWrapper glWrapper) {
     mGLWrapper = glWrapper;
   }
 
@@ -222,10 +222,6 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
     }
     mDetached = true;
     super.onDetachedFromWindow();
-  }
-
-  public interface GLWrapper {
-    GL wrap(GL gl);
   }
 
   public interface EGLContextFactory {
@@ -1332,7 +1328,7 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
   private GLSurfaceView.EGLConfigChooser mEGLConfigChooser;
   private GLSurfaceView.EGLContextFactory mEGLContextFactory;
   private GLSurfaceView.EGLWindowSurfaceFactory mEGLWindowSurfaceFactory;
-  private GLSurfaceView.GLWrapper mGLWrapper;
+  private GLView.GLWrapper mGLWrapper;
   private int mDebugFlags;
   private int mEGLContextClientVersion;
   private boolean mPreserveEGLContextOnPause;
