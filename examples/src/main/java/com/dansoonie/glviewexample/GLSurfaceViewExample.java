@@ -21,8 +21,7 @@ public class GLSurfaceViewExample extends Activity {
 
     renderer = new Renderer();
     surfaceView.setRenderer(renderer);
-    surfaceView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
-
+    surfaceView.setRenderMode(GLView.RENDERMODE_CONTINUOUSLY);
   }
 
   @Override

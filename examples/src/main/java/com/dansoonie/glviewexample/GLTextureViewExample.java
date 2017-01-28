@@ -21,7 +21,7 @@ public class GLTextureViewExample extends Activity {
 
     renderer = new Renderer();
     textureView.setRenderer(renderer);
-    textureView.setRenderMode(GLTextureView.RENDERMODE_CONTINUOUSLY);
+    textureView.setRenderMode(GLView.RENDERMODE_CONTINUOUSLY);
   }
 
   @Override
