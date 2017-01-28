@@ -1,7 +1,8 @@
 package com.dansoonie.glviewexample;
 
+import com.dansoonie.lib.glview.GLSurfaceView;
+
 import android.app.Activity;
-import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
 public class GLSurfaceViewExample extends Activity {
@@ -20,5 +21,17 @@ public class GLSurfaceViewExample extends Activity {
     surfaceView.setRenderer(renderer);
     surfaceView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
 
+  }
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+    surfaceView.onResume();
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    surfaceView.onPause();
   }
 }

@@ -28,6 +28,7 @@ public class LauncherActivity extends AppCompatActivity {
   private static List<Item> createItems() {
     List<Item> items = new LinkedList<>();
     items.add(new Item("GLSurfaceView Example", GLSurfaceViewExample.class));
+    items.add(new Item("GLTextureView Example", GLTextureViewExample.class));
     return items;
   }
 }

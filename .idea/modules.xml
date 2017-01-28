@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GLViewExample.iml" filepath="$PROJECT_DIR$/GLViewExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GLView.iml" filepath="$PROJECT_DIR$/GLView.iml" />
       <module fileurl="file://$PROJECT_DIR$/examples/examples.iml" filepath="$PROJECT_DIR$/examples/examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/glview/glview.iml" filepath="$PROJECT_DIR$/glview/glview.iml" />
     </modules>
