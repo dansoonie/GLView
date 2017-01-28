@@ -91,7 +91,7 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
     return mPreserveEGLContextOnPause;
   }
 
-  public void setRenderer(GLTextureView.Renderer renderer) {
+  public void setRenderer(GLView.Renderer renderer) {
     checkRenderThreadState();
     if (mEGLConfigChooser == null) {
       mEGLConfigChooser = new SimpleEGLConfigChooser(true);
@@ -228,14 +228,6 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
 
   public interface GLWrapper {
     GL wrap(GL gl);
-  }
-
-  public interface Renderer {
-    void onSurfaceCreated(GL10 gl, EGLConfig config);
-
-    void onSurfaceChanged(GL10 gl, int width, int height);
-
-    void onDrawFrame(GL10 gl);
   }
 
   public interface EGLContextFactory {
@@ -1334,7 +1326,7 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
 
   private final WeakReference<GLTextureView> mThisWeakRef = new WeakReference<GLTextureView>(this);
   private GLThread mGLThread;
-  private GLTextureView.Renderer mRenderer;
+  private GLView.Renderer mRenderer;
   private boolean mDetached;
   private GLTextureView.EGLConfigChooser mEGLConfigChooser;
   private GLTextureView.EGLContextFactory mEGLContextFactory;

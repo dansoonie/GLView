@@ -99,7 +99,7 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
     return mPreserveEGLContextOnPause;
   }
 
-  public void setRenderer(GLSurfaceView.Renderer renderer) {
+  public void setRenderer(GLView.Renderer renderer) {
     checkRenderThreadState();
     if (mEGLConfigChooser == null) {
       mEGLConfigChooser = new SimpleEGLConfigChooser(true);
@@ -226,14 +226,6 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
   public interface GLWrapper {
     GL wrap(GL gl);
-  }
-
-  public interface Renderer {
-    void onSurfaceCreated(GL10 gl, EGLConfig config);
-
-    void onSurfaceChanged(GL10 gl, int width, int height);
-
-    void onDrawFrame(GL10 gl);
   }
 
   public interface EGLContextFactory {
@@ -1335,7 +1327,7 @@ public class GLSurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
   private final WeakReference<GLSurfaceView> mThisWeakRef = new WeakReference<GLSurfaceView>(this);
   private GLThread mGLThread;
-  private GLSurfaceView.Renderer mRenderer;
+  private GLView.Renderer mRenderer;
   private boolean mDetached;
   private GLSurfaceView.EGLConfigChooser mEGLConfigChooser;
   private GLSurfaceView.EGLContextFactory mEGLContextFactory;

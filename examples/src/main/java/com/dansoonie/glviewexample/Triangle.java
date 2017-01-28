@@ -1,5 +1,7 @@
 package com.dansoonie.glviewexample;
 
+import com.dansoonie.glviewexample.renderer.Renderer;
+
 import android.opengl.GLES20;
 
 import java.nio.ByteBuffer;

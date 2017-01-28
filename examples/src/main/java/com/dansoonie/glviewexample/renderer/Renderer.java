@@ -1,7 +1,7 @@
 package com.dansoonie.glviewexample.renderer;
 
 import com.dansoonie.glviewexample.Triangle;
-import com.dansoonie.lib.glview.GLTextureView;
+import com.dansoonie.lib.glview.GLView;
 
 import android.opengl.GLES20;
 import android.opengl.Matrix;
@@ -12,10 +12,10 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * Created by dansoonie on 1/28/17.
+ * Created by dansoonie on 1/29/17.
  */
 
-public class TextureViewRenderer implements GLTextureView.Renderer {
+public class Renderer implements GLView.Renderer {
   private Triangle triangle;
 
   // mvpMatrix is an abbreviation for "Model View Projection Matrix"

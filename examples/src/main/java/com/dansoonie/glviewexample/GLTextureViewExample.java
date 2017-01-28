@@ -1,7 +1,8 @@
 package com.dansoonie.glviewexample;
 
-import com.dansoonie.glviewexample.renderer.TextureViewRenderer;
+import com.dansoonie.glviewexample.renderer.Renderer;
 import com.dansoonie.lib.glview.GLTextureView;
+import com.dansoonie.lib.glview.GLView;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.os.Bundle;
 public class GLTextureViewExample extends Activity {
 
   private GLTextureView textureView;
-  private TextureViewRenderer renderer;
+  private GLView.Renderer renderer;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class GLTextureViewExample extends Activity {
     textureView.setEGLContextClientVersion(2);
     setContentView(textureView);
 
-    renderer = new TextureViewRenderer();
+    renderer = new Renderer();
     textureView.setRenderer(renderer);
     textureView.setRenderMode(GLTextureView.RENDERMODE_CONTINUOUSLY);
   }

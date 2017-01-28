@@ -1,6 +1,8 @@
 package com.dansoonie.glviewexample;
 
+import com.dansoonie.glviewexample.renderer.Renderer;
 import com.dansoonie.lib.glview.GLSurfaceView;
+import com.dansoonie.lib.glview.GLView;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +10,7 @@ import android.os.Bundle;
 public class GLSurfaceViewExample extends Activity {
 
   private GLSurfaceView surfaceView;
-  private Renderer renderer;
+  private GLView.Renderer renderer;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
